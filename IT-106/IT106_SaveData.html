@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+<head>
+<tittle>IT106 Add/Save data in Database</tittle>
+</head>
+<style>
+.form
+   {
+    background-color: #CACFD2;
+    opacity:.8;
+    align: center;
+    background-size: cover;
+    width:40%;
+    padding: 40px;
+    margin: 100px auto;}
+h2 {
+   color: blue;
+   font-family: algerian;
+   text-align: center }
+h3{
+   color: powderblack;
+   font-family: algerian;
+   text-align: center;
+   margin:50px;}
+</style>   
+<body>
+<div class="form">
+	<h2> Simple User input </h2>
+    <hr>
+    <form method="post" action="SaveData.php">
+       <h3>
+       <label>first Name: </label>
+       <input type="text" name="Fname" placeholder="Enter your First name" required/>
+	   <br>
+	   
+	   <label>Lastname: </label>
+       <input type="text" name="Lname" placeholder="Enter your Last name" required/>
+       <br>
+	   
+	   <label>Age: </label>
+       <input type="number" name="age" placeholder="Enter your age" required/>
+       <br>
+	   
+	   <label>Course: </label>
+       <input type="text" name="course" placeholder="Enter your Course" required/>
+       <br>
+	   
+	   <label>Year Level: </label>
+       <input type="text" name="yrlvl" placeholder="Enter your Year level" required/>
+       <br>
+	   
+	   <hr>
+       <input style="text-align: center; width:15%; height:30px; background-color: #80ffff;" type="submit" value="Save">
+       </h3>
+	   <hr>
+     </form>
+</div>
+</body>
+</html>
