@@ -1,0 +1,165 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>User Login</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+body{
+       background-image: url('tempo1.jpg');
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: 100% 100%;
+	  }
+div.form {
+  align: center;
+  opacity: .8;
+  background-size: cover;
+  width:30%;
+  padding: 40px;
+  margin: 100px auto;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,      /* inner white */
+    inset 20px 0 80px #f0f,   /* inner left magenta short */
+    inset -20px 0 80px #0ff,  /* inner right cyan short */
+    inset 20px 0 300px #f0f,  /* inner left magenta broad */
+    inset -20px 0 300px #0ff, /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px #f0f,        /* outer left magenta */
+    10px 0 80px #0ff;         /* outer right cyan */
+}
+.jj
+   {
+    background-color: #CACFD2;
+    opacity:.50;
+    align: center;
+    background-size: cover;
+    width:30%;
+    padding: 40px;
+    margin: 100px auto;}
+.glow {
+    font-size: 40px;
+    color: #fff;
+	text-decoration: underline;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+     }
+
+@-webkit-keyframes glow {
+    from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+         }
+  
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+       }
+       }
+.uLog{
+    opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+h2 {
+   text-decoration: underline;
+   color: white;
+   font-family: algerian;
+   text-align: center }
+h3{
+   color: powderblack;
+   font-family: algerian;
+   text-align: center;
+   margin:50px;
+   }
+.modal-body, .modal-title, .modal-footer, .modal-header{
+    background-color: #E5E8E8 ;
+	}
+</style>   
+<body>
+<div class="form">
+	<h1 class="glow"> Teacher Login </h1>
+    <hr style="border: 3px solid white; border-radius: 5px;">
+    <form method="post" action="login.php">
+	   <input type="hidden" name="usertype" value="USER">
+       <h4>
+       <label style="color: white;">Username: </label>
+       <input type="text" style="text-align: center; height:35px; background-color: #E1EFEE ; border-radius: 10px" name="username" placeholder="Enter your Userame" required/>
+	   <br>
+	   
+	   <label style="color: white;">Password: </label>
+       <input type="password" style="text-align: center; height:35px; background-color: #E1EFEE ; border-radius: 10px;" name="password" placeholder="Enter your Password" required/>
+       <br>
+	   
+	   <br>
+       <input style="text-align: center; width:18%; height:35px; background-color: #00FFEC; border-radius: 10px; justify-content: center;" type="submit" name="login" value="Login">
+	   <h4 style="font-size: 18px; text-align: left; color: white;">back to <a href="login.html"> Admin</a></h4>
+       </h4>
+	  <hr style="border: 3px solid white; border-radius: 5px;  justify-content: center;">
+	  
+	  <div class="uLog">
+	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adminModal">
+	  <h5>Create</h5>
+      </button>
+	  </div>
+	  
+     </form>
+</div>
+
+<div class="modal fade" id="adminModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 style="text-align: center" class="modal-title" id="exampleModalLongTitle">Signup</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	
+      <div class="modal-body">
+	  <form method="post" action="message.php">
+      
+       <label><h4>First name: </h4></label>
+       <input type="text" id="fname" name="fname" required/>
+       <br>
+	   
+       <label><h4>Last name: </h4></label>
+       <input type="message" id="lname" name="lname" required/>
+       <br>
+	   
+	   <label><h4>Gender: </h4></label>
+       <h4>
+       <input type="radio" name="gender" value="Male" required> Male
+	   <input type="radio" name="gender" value="Female" required> Female
+	   </h4>
+       <br>
+	   
+	   <hr style="border: 3px solid white; border-radius: 5px;  justify-content: center;">
+		
+	   <label><h4>Username: </h4></label>
+       <input type="text" id="fname" name="fname" required/>
+       <br>
+	   
+	   <label><h4>Password: </h4></label>
+       <input type="text" id="fname" name="fname" required/>
+       <br>
+	   
+       </div>
+	  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" value="submit" name="A_login">Create</button>
+		
+	  </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
